@@ -10,12 +10,14 @@ Test_1
     Open Browser    https://www.jimms.fi/fi/Product/Oheislaitteet    Firefox
     Maximize Browser Window
     Sleep    2
+    Scroll Element Into View    locator
     Click Element    xpath://html/body/main/div[2]/div/div[2]/div[4]/div/div[1]/product-box/div[2]/div[2]/h5/a
     Click Element    xpath://html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a
     Click Element    xpath://html/body/header/div/div[3]/jim-cart-dropdown/div/a
 Test_2
     Open Browser    https://www.jimms.fi/    Firefox
     Maximize Browser Window
+    Wait Until Element Is Visible    xpath://html/body/footer/div[1]/div[1]/div[2]/div/div[2]/div/a
     Click Element    xpath://html/body/footer/div[1]/div[1]/div[2]/div/div[2]/div/a
     Input Text    xpath:///*[@id="email"]    lassi23004@student.hamk.fi
     Click Button    xpath://html/body/main/div/div/form/div[3]/input

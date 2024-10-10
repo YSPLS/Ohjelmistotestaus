@@ -1,106 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-09T18:44:03.911348" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-10T13:46:55.960941" rpa="false" schemaversion="5">
 <suite id="s1" name="Jimms Test" source="c:\Users\Lassi\Documents\GitHub\Ohjelmistotestaus\robot\jimms_test.robot">
-<test id="s1-t1" name="Test_4" line="41">
+<test id="s1-t1" name="Test_2" line="17">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-09T18:44:04.116162" level="INFO">Opening browser 'Firefox' to base url 'https://www.jimms.fi/'.</msg>
+<msg time="2024-10-10T13:46:56.168939" level="INFO">Opening browser 'Firefox' to base url 'https://www.jimms.fi/'.</msg>
 <arg>https://www.jimms.fi/</arg>
 <arg>Firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-09T18:44:04.116162" elapsed="6.365361"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-09T18:44:10.483130" elapsed="0.276863"/>
+<status status="PASS" start="2024-10-10T13:46:56.167958" elapsed="6.423369"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-09T18:44:12.765237" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-10T13:47:04.592773" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-09T18:44:10.759993" elapsed="2.005244"/>
+<status status="PASS" start="2024-10-10T13:47:02.591327" elapsed="2.001446"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-09T18:44:12.765237" level="INFO">Clicking element 'xpath://html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]/a'.</msg>
-<arg>xpath://html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-09T18:44:12.765237" elapsed="0.333018"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:47:04.593907" level="INFO">Clicking button 'Tilaa uutiskirje'.</msg>
+<msg time="2024-10-10T13:47:04.757012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-10T13:47:04.757012" level="FAIL">Button with locator 'Tilaa uutiskirje' not found.</msg>
+<arg>${BUTTON_TEXT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-10-10T13:47:04.592773" elapsed="0.167239">Button with locator 'Tilaa uutiskirje' not found.</status>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-09T18:44:15.098652" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-09T18:44:13.098255" elapsed="2.000397"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath:///*[@id="email"]</arg>
+<arg>lassi23004@student.hamk.fi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-10T13:47:04.760012" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-09T18:44:15.098652" level="INFO">Clicking element 'xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div/div/div[2]/div/ul/li[12]/div/div/a/i'.</msg>
-<arg>xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div/div/div[2]/div/ul/li[12]/div/div/a/i</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-09T18:44:15.098652" elapsed="0.335253"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://html/body/main/div/div/form/div[3]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-10T13:47:04.761013" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-09T18:44:17.434012" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-09T18:44:15.433905" elapsed="2.000107"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-09T18:44:17.434012" level="INFO">Clicking element 'xpath=//span[contains(@class,'fs-5') and contains(@class,'flex-grow-1') and contains(@class,'fw-bold')]'.</msg>
-<msg time="2024-10-09T18:44:17.549194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-10-09T18:44:17.549194" level="FAIL">ElementNotInteractableException: Message: Element &lt;span class="fs-5 fw-bold flex-grow-1 d-inline"&gt; could not be scrolled into view
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
-ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:353:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:167:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
-</msg>
-<arg>xpath=//span[contains(@class,'fs-5') and contains(@class,'flex-grow-1') and contains(@class,'fw-bold')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-10-09T18:44:17.434012" elapsed="0.115182">ElementNotInteractableException: Message: Element &lt;span class="fs-5 fw-bold flex-grow-1 d-inline"&gt; could not be scrolled into view
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
-ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:353:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:167:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
-</status>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-10-09T18:44:17.549194" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[32]/span[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-10-09T18:44:17.549194" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-10-09T18:44:17.557226" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[28]/div/i</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-10-09T18:44:17.557226" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-10-09T18:44:04.116162" elapsed="13.441064">ElementNotInteractableException: Message: Element &lt;span class="fs-5 fw-bold flex-grow-1 d-inline"&gt; could not be scrolled into view
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
-ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:353:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:167:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
-</status>
+<status status="FAIL" start="2024-10-10T13:46:56.166947" elapsed="8.594066">Button with locator 'Tilaa uutiskirje' not found.</status>
 </test>
-<status status="FAIL" start="2024-10-09T18:44:03.916362" elapsed="13.640864"/>
+<status status="FAIL" start="2024-10-10T13:46:55.966941" elapsed="8.795072"/>
 </suite>
 <statistics>
 <total>
