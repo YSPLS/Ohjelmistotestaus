@@ -88,3 +88,10 @@ Test_6
     Click Element    xpath:/html/body/main/div/div/div/div[2]/div[4]/div/div/form/input[3]
     Sleep    2
     #Userin informaatiot
+
+Test_7
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    Click Element    xpath:
+    Sleep    2
