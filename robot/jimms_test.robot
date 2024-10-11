@@ -53,3 +53,38 @@ Test_4
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[32]/span[2]
     Sleep    2
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[28]/div/i
+
+*** Test Cases ***
+Test_5
+#change the background color
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    2
+    Click Element    xpath:/html/body/div[1]/div/div/span
+    Sleep    2
+    Click Element    xpath:/html/body/div[1]/div/div/ul/li[1]/button
+
+Test_6
+#put item in the shopping cart and navigate all the way user information page
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    #pelitietokoneet
+    Click Element    xpath:/html/body/main/div[3]/jim-category-image/div/div[1]/a/div[1]/img
+    Sleep    2
+    #lisää ostoskoriin Mach 1
+    Click Element    xpath:/html/body/main/div[2]/div/div[2]/div[4]/div[4]/div[1]/div[1]/product-box/div[2]/div[3]/addto-cart-wrapper/div/a
+    Sleep    2
+    #avaa ostoskori
+    Click Element    xpath:/html/body/header/div/div[3]/jim-cart-dropdown/div/a
+    Sleep    2
+    #Siirry kassalle
+    Click Element   xpath:/html/body/main/div/div/div/div[2]/div/div[3]/a
+    Sleep    2
+    #Ei, ilman asiakastiliä
+    Click Element    xpath:/html/body/main/div/div/div/div[1]/div/div/div/div[3]/input
+    Sleep    2
+    #Seuraava
+    Click Element    xpath:/html/body/main/div/div/div/div[2]/div[4]/div/div/form/input[3]
+    Sleep    2
+    #Userin informaatiot
