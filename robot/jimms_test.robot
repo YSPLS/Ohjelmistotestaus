@@ -1,46 +1,53 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-
-*** Variables ***
-
+Library    XML
 
 *** Test Cases ***
 Test_1
+    #Add item to cart MUUTA LASSI MUISTA
     Open Browser    https://www.jimms.fi/fi/Product/Oheislaitteet    Firefox
     Maximize Browser Window
     Sleep    2
-    Scroll Element Into View    locator
     Click Element    xpath://html/body/main/div[2]/div/div[2]/div[4]/div/div[1]/product-box/div[2]/div[2]/h5/a
     Click Element    xpath://html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a
     Click Element    xpath://html/body/header/div/div[3]/jim-cart-dropdown/div/a
 Test_2
+    #Newsletter subsribe test
     Open Browser    https://www.jimms.fi/    Firefox
     Maximize Browser Window
     Wait Until Element Is Visible    xpath://html/body/footer/div[1]/div[1]/div[2]/div/div[2]/div/a
+    Sleep    3
+    #Press newsletter button
     Click Element    xpath://html/body/footer/div[1]/div[1]/div[2]/div/div[2]/div/a
-    Input Text    xpath:///*[@id="email"]    lassi23004@student.hamk.fi
+    #input email
+    Input Text    xpath://*[@id="email"]    lassi23004@student.hamk.fi
+    #click submit button
     Click Button    xpath://html/body/main/div/div/form/div[3]/input
 Test_3
+    #RMA request test
     Open Browser    https://www.jimms.fi/    Firefox
     Maximize Browser Window
+    Sleep    3
     Click Element    xpath://html/body/footer/div[1]/div[2]/div[1]/ul/li[4]/a
     Click Element    xpath://html/body/main/div[2]/div/div[2]/div/div/ol/li[2]/a
 
-    Input Text    xpath:///*[@id="pf-SalesID"]    02139834701924
-    Input Text    xpath:///*[@id="pf-Name"]    Marko Kaski
-    Input Text    xpath:///*[@id="pf-StreetAddress"]    Papinpellontie 6, A11
-    Input Text    xpath:///*[@id="pf-PostalCode"]    04130
-    Input Text    xpath:///*[@id="pf-City"]    Sipoo
-    Input Text    xpath:///*[@id="pf-Email"]    Jokeri95@gmail.com
-    Input Text    xpath:///*[@id="pf-Phone"]    +358124412334
-    Input Text    xpath:///*[@id="pf-RmaProductCode"]    42069
-    Input Text    xpath:///*[@id="pf-RmaProductName"]    Tampuriini
-    Input Text    xpath:///*[@id="RmaMessage"]    Ei pojat asiat näin huonosti voi olla
-    Input Text    xpath:///*[@id="pf-BankAccount"]    FI39458729347
-    Input Text    xpath:///*[@id="pf-OSPassword"]    0420
+    Input Text    xpath://*[@id="pf-SalesID"]    02139834701924
+    Input Text    xpath://*[@id="pf-Name"]    Marko Kaski
+    Input Text    xpath://*[@id="pf-StreetAddress"]    Papinpellontie 6, A11
+    Input Text    xpath://*[@id="pf-PostalCode"]    04130
+    Input Text    xpath://*[@id="pf-City"]    Sipoo
+    Input Text    xpath://*[@id="pf-Email"]    Jokeri95@gmail.com
+    Input Text    xpath://*[@id="pf-Phone"]    +358124412334
+    Input Text    xpath://*[@id="pf-RmaProductCode"]    42069
+    Input Text    xpath://*[@id="pf-RmaProductName"]    Tampuriini
+    Input Text    xpath://*[@id="RmaMessage"]    Ei pojat asiat näin huonosti voi olla
+    Input Text    xpath://*[@id="pf-BankAccount"]    FI39458729347
+    Input Text    xpath://*[@id="pf-OSPassword"]    0420
+    
     Click Button    xpath://html/body/main/div[2]/div/div[2]/div/div/form/input[2]
 Test_4
+    #Power supply manufactor check
     Open Browser    https://www.jimms.fi/    Firefox
     Maximize Browser Window
     Sleep    2   
@@ -48,15 +55,14 @@ Test_4
     Sleep    2
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div/div/div[2]/div/ul/li[12]/div/div/a/i
     Sleep    2
-    Click Element    /html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[1]/span
+    Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[1]/i[2]
     Sleep    2
-    Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[32]/span[2]
+    Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[31]/span[2]
     Sleep    2
-    Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[28]/div/i
+    Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[3]/div[1]/span
 
-*** Test Cases ***
 Test_5
-#change the background color
+    #change the background color
     Open Browser    https://www.jimms.fi/    Chrome
     Maximize Browser Window
     Sleep    2
@@ -95,3 +101,7 @@ Test_7
     Sleep    1
     Click Element    xpath:
     Sleep    2
+
+
+
+
