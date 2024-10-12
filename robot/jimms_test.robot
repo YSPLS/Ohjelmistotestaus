@@ -2,16 +2,40 @@
 Library    SeleniumLibrary
 Library    String
 Library    XML
+Library    Collections
+
+*** Variables ***
+${text}    Kampanjat
+${H1}    xpath=//h1
+${Tietokoneet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]/a
+${Komponentit}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]/a
+${Oheislaitteet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]/a
+${Pelaaminen}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]/a
+${Sim_Racing}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]/a
+${Verkkotuotteet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]/a
+${Tarvikkeet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]/a
+${Erikoistuotteet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[8]/a
+${Ohjelmistot}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[9]/a
+${Palvelut}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[10]/a
+${Kampanjat}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[11]/a
 
 *** Test Cases ***
 Test_1
-    #Add item to cart MUUTA LASSI MUISTA
-    Open Browser    https://www.jimms.fi/fi/Product/Oheislaitteet    Firefox
+    Open Browser    https://www.jimms.fi/   Firefox
     Maximize Browser Window
     Sleep    2
-    Click Element    xpath://html/body/main/div[2]/div/div[2]/div[4]/div/div[1]/product-box/div[2]/div[2]/h5/a
-    Click Element    xpath://html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a
-    Click Element    xpath://html/body/header/div/div[3]/jim-cart-dropdown/div/a
+    Check Landing Page    ${Tietokoneet}    Tietokoneet
+    Check Landing Page    ${Komponentit}    Komponentit
+    Check Landing Page    ${Oheislaitteet}    Oheislaitteet
+    Check Landing Page    ${Pelaaminen}    Pelaaminen
+    Check Landing Page    ${Sim_Racing}    Sim_Racing
+    Check Landing Page    ${Verkkotuotteet}    Verkkotuotteet
+    Check Landing Page    ${Tarvikkeet}    Tarvikkeet
+    Check Landing Page    ${Erikoistuotteet}    Erikoistuotteet
+    Check Landing Page    ${Ohjelmistot}    Ohjelmistot
+    Check Landing Page    ${Palvelut}    Palvelut
+    Check Landing Page    ${Kampanjat}    Kampanjat
+    
 Test_2
     #Newsletter subsribe test
     Open Browser    https://www.jimms.fi/    Firefox
@@ -104,4 +128,15 @@ Test_7
 
 
 
+*** Keywords ***
+Check Landing Page
+    [Arguments]    ${element}    ${expected_text}
+    Click Element    ${element}
+    Wait Until Element Is Visible    ${H1}    timeout=10
+    # Log the current value of H1
+    Log    H1 XPath: ${H1}
 
+    # Get the text of the H1 element
+    ${h1_text}=    Get Text    ${H1}
+    Log    Retrieved H1 text: ${h1_text}
+    Run Keyword If    '${expected_text}' in '${h1_text}'    Log    Landing page for '${expected_text}' found    ELSE    Log    There is no landing page for '${expected_text}'
