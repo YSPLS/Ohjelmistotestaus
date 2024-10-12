@@ -5,7 +5,6 @@ Library    XML
 Library    Collections
 
 *** Variables ***
-${text}    Kampanjat
 ${H1}    xpath=//h1
 ${Tietokoneet}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]/a
 ${Komponentit}    //html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]/a
