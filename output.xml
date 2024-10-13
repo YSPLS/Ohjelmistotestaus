@@ -1,599 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-12T17:18:44.473714" rpa="false" schemaversion="5">
-<suite id="s1" name="Jimms Test" source="c:\Users\Lassi\Documents\GitHub\Ohjelmistotestaus\robot\jimms_test.robot">
-<test id="s1-t1" name="Test_1" line="23">
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-13T12:59:37.479358" rpa="false" schemaversion="5">
+<suite id="s1" name="Jimms Test" source="c:\Users\izpel\OneDrive\Tiedostot\Ohjelmistotestaus\robot\jimms_test.robot">
+<test id="s1-t1" name="Test_8" line="129">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:44.779327" level="INFO">Opening browser 'Firefox' to base url 'https://www.jimms.fi/'.</msg>
+<msg time="2024-10-13T12:59:38.131664" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
 <arg>https://www.jimms.fi/</arg>
-<arg>Firefox</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-12T17:18:44.775317" elapsed="6.175473"/>
+<status status="PASS" start="2024-10-13T12:59:38.129365" elapsed="5.651955"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-12T17:18:50.950790" elapsed="0.262863"/>
+<status status="PASS" start="2024-10-13T12:59:43.789688" elapsed="1.183424"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-12T17:18:53.215615" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-13T12:59:45.992314" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:44.988198" elapsed="1.004116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:45.996317" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a/span'.</msg>
+<arg>xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:45.993845" elapsed="0.800175"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:48.794481" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-12T17:18:51.214702" elapsed="2.000913"/>
+<status status="PASS" start="2024-10-13T12:59:46.794020" elapsed="2.000461"/>
 </kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:53.217786" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:48.846313" level="INFO">Clicking element 'xpath:/html/body/main/div/div[1]/div/div/div/div[2]/input'.</msg>
+<arg>xpath:/html/body/main/div/div[1]/div/div/div/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.216635" elapsed="0.334311"/>
+<status status="PASS" start="2024-10-13T12:59:48.843913" elapsed="0.207154"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.550946" elapsed="0.072728"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:51.053000" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:49.052968" elapsed="2.000544"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:53.624676" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.624676" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:53.705596" level="INFO">${h1_text} = Tietokoneet</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.624676" elapsed="0.080920"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:53.706607" level="INFO">Retrieved H1 text: Tietokoneet</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.706607" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:53.706607" level="INFO">Landing page for 'Tietokoneet' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.706607" elapsed="0.000994"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.706607" elapsed="0.000994"/>
-</kw>
-<arg>${Tietokoneet}</arg>
-<arg>Tietokoneet</arg>
-<status status="PASS" start="2024-10-12T17:18:53.216635" elapsed="0.491133"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:53.708769" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:51.057663" level="INFO">Clicking element 'name:EmailAddress'.</msg>
+<arg>name:EmailAddress</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:53.707768" elapsed="0.361787"/>
+<status status="PASS" start="2024-10-13T12:59:51.056187" elapsed="0.193958"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.069555" elapsed="0.060872"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:51.257729" level="INFO">Typing text 'IiroPeltonen@gmail.com' into text field 'name:EmailAddress'.</msg>
+<arg>name:EmailAddress</arg>
+<arg>IiroPeltonen@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:51.252357" elapsed="0.430553"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.131424" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.131424" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:52.713391" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:51.696651" elapsed="1.016740"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:54.235457" level="INFO">${h1_text} = Komponentit</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.132425" elapsed="0.103032"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.236470" level="INFO">Retrieved H1 text: Komponentit</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.236470" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.236470" level="INFO">Landing page for 'Komponentit' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.236470" elapsed="0.000997"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.236470" elapsed="0.001052"/>
-</kw>
-<arg>${Komponentit}</arg>
-<arg>Komponentit</arg>
-<status status="PASS" start="2024-10-12T17:18:53.707768" elapsed="0.529839"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:54.239613" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:52.986075" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.238614" elapsed="0.423958"/>
+<status status="PASS" start="2024-10-13T12:59:52.986075" elapsed="0.698817"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.662572" elapsed="0.080817"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:53.684892" level="INFO">Typing text 'salasana' into text field 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
+<arg>salasana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:53.684892" elapsed="0.183364"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.744391" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.744391" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:54.874805" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:53.874332" elapsed="1.000473"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:54.823651" level="INFO">${h1_text} = Oheislaitteet</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.745393" elapsed="0.078258"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.824647" level="INFO">Retrieved H1 text: Oheislaitteet</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.824647" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:54.824647" level="INFO">Landing page for 'Oheislaitteet' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.824647" elapsed="0.000000"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.824647" elapsed="0.001008"/>
-</kw>
-<arg>${Oheislaitteet}</arg>
-<arg>Oheislaitteet</arg>
-<status status="PASS" start="2024-10-12T17:18:54.237607" elapsed="0.588048"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:54.826652" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:54.877003" level="INFO">Clicking element 'name:ConfirmPassword'.</msg>
+<arg>name:ConfirmPassword</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:54.826652" elapsed="0.305836"/>
+<status status="PASS" start="2024-10-13T12:59:54.876318" elapsed="0.177312"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.132488" elapsed="0.124030"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:55.053630" level="INFO">Typing text 'salasana' into text field 'name:ConfirmPassword'.</msg>
+<arg>name:ConfirmPassword</arg>
+<arg>salasana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:55.053630" elapsed="0.223148"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.257690" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.257690" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:56.281552" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:55.281437" elapsed="1.000115"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:55.290467" level="INFO">${h1_text} = Pelaaminen</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.257690" elapsed="0.032777"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.290467" level="INFO">Retrieved H1 text: Pelaaminen</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.290467" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.291467" level="INFO">Landing page for 'Pelaaminen' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.291467" elapsed="0.000000"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.290467" elapsed="0.001000"/>
-</kw>
-<arg>${Pelaaminen}</arg>
-<arg>Pelaaminen</arg>
-<status status="PASS" start="2024-10-12T17:18:54.825655" elapsed="0.465812"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:55.293463" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:56.281552" level="INFO">Clicking element 'name:FirstName'.</msg>
+<arg>name:FirstName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.292467" elapsed="0.290877"/>
+<status status="PASS" start="2024-10-13T12:59:56.281552" elapsed="0.142015"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.583344" elapsed="0.122111"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:56.429717" level="INFO">Typing text 'Iiro' into text field 'name:FirstName'.</msg>
+<arg>name:FirstName</arg>
+<arg>Iiro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:56.428624" elapsed="0.290327"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.705455" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.705455" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:57.739727" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:56.732829" elapsed="1.006898"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:55.730388" level="INFO">${h1_text} = Sim Racing</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.706444" elapsed="0.023944"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.731393" level="INFO">Retrieved H1 text: Sim Racing</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.731393" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:55.732390" level="INFO">There is no landing page for 'Sim_Racing'</msg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.731393" elapsed="0.000997"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.731393" elapsed="0.000997"/>
-</kw>
-<arg>${Sim_Racing}</arg>
-<arg>Sim_Racing</arg>
-<status status="PASS" start="2024-10-12T17:18:55.292467" elapsed="0.439923"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:55.733390" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:57.750083" level="INFO">Clicking element 'name:LastName'.</msg>
+<arg>name:LastName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:55.733390" elapsed="0.328228"/>
+<status status="PASS" start="2024-10-13T12:59:57.750083" elapsed="0.166513"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.061618" elapsed="0.112041"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:57.916596" level="INFO">Typing text 'Peltonen' into text field 'name:LastName'.</msg>
+<arg>name:LastName</arg>
+<arg>Peltonen</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:57.916596" elapsed="0.232212"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.174659" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.173659" elapsed="0.001000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T12:59:59.149071" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:58.148808" elapsed="1.001992"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:56.232886" level="INFO">${h1_text} = Verkkotuotteet</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.174659" elapsed="0.058227"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.233876" level="INFO">Retrieved H1 text: Verkkotuotteet</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.233876" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.234878" level="INFO">Landing page for 'Verkkotuotteet' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.234878" elapsed="0.000000"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.234878" elapsed="0.000000"/>
-</kw>
-<arg>${Verkkotuotteet}</arg>
-<arg>Verkkotuotteet</arg>
-<status status="PASS" start="2024-10-12T17:18:55.733390" elapsed="0.501488"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:56.235879" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T12:59:59.174204" level="INFO">Clicking element 'name:PostalCode'.</msg>
+<arg>name:PostalCode</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.235879" elapsed="0.356553"/>
+<status status="PASS" start="2024-10-13T12:59:59.150800" elapsed="0.386251"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.593430" elapsed="0.134951"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T12:59:59.537051" level="INFO">Typing text '13600' into text field 'name:PostalCode'.</msg>
+<arg>name:PostalCode</arg>
+<arg>13600</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T12:59:59.537051" elapsed="0.235155"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.728603" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.728603" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T13:00:00.773312" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T12:59:59.772206" elapsed="1.001106"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:56.749395" level="INFO">${h1_text} = Tarvikkeet</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.729429" elapsed="0.019966"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.750400" level="INFO">Retrieved H1 text: Tarvikkeet</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.750400" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:56.750400" level="INFO">Landing page for 'Tarvikkeet' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.750400" elapsed="0.001002"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.750400" elapsed="0.001002"/>
-</kw>
-<arg>${Tarvikkeet}</arg>
-<arg>Tarvikkeet</arg>
-<status status="PASS" start="2024-10-12T17:18:56.235879" elapsed="0.515523"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:56.753412" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[8]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T13:00:00.844677" level="INFO">Clicking element 'name:City'.</msg>
+<arg>name:City</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:56.752416" elapsed="0.350518"/>
+<status status="PASS" start="2024-10-13T13:00:00.831728" elapsed="0.189435"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.102934" elapsed="0.122732"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-13T13:00:01.022755" level="INFO">Typing text 'Hämeenlinna' into text field 'name:City'.</msg>
+<arg>name:City</arg>
+<arg>Hämeenlinna</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-13T13:00:01.022755" elapsed="0.238216"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.226662" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.226662" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T13:00:02.270648" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T13:00:01.268069" elapsed="1.002579"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:57.248535" level="INFO">${h1_text} = Jäähdytys- ja erikoistuotteet</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.226662" elapsed="0.021873"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.248535" level="INFO">Retrieved H1 text: Jäähdytys- ja erikoistuotteet</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.248535" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.249395" level="INFO">There is no landing page for 'Erikoistuotteet'</msg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.249395" elapsed="0.000000"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.249395" elapsed="0.000000"/>
-</kw>
-<arg>${Erikoistuotteet}</arg>
-<arg>Erikoistuotteet</arg>
-<status status="PASS" start="2024-10-12T17:18:56.751402" elapsed="0.497993"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:57.251508" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[9]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T13:00:02.270648" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input'.</msg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.250505" elapsed="0.290069"/>
+<status status="PASS" start="2024-10-13T13:00:02.270648" elapsed="0.186743"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.541574" elapsed="0.216735"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T13:00:03.458991" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T13:00:02.457391" elapsed="1.001600"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.759560" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.758835" elapsed="0.001230"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:57.785035" level="INFO">${h1_text} = Ohjelmistot ja pelit</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.760593" elapsed="0.024442"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.785582" level="INFO">Retrieved H1 text: Ohjelmistot ja pelit</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.785035" elapsed="0.000547"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:57.786101" level="INFO">Landing page for 'Ohjelmistot' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.786101" elapsed="0.000525"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.785582" elapsed="0.001044"/>
-</kw>
-<arg>${Ohjelmistot}</arg>
-<arg>Ohjelmistot</arg>
-<status status="PASS" start="2024-10-12T17:18:57.250505" elapsed="0.536121"/>
-</kw>
-<kw name="Check Landing Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:57.789010" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[10]/a'.</msg>
-<arg>${element}</arg>
+<msg time="2024-10-13T13:00:03.458991" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input'.</msg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:57.788485" elapsed="0.349217"/>
+<status status="PASS" start="2024-10-13T13:00:03.458991" elapsed="4.628420"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.137702" elapsed="0.118962"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-13T13:00:10.087693" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-13T13:00:08.087411" elapsed="2.000282"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.257786" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.257786" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:58.284604" level="INFO">${h1_text} = Palvelut</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.257786" elapsed="0.026818"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.285604" level="INFO">Retrieved H1 text: Palvelut</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.285604" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.286605" level="INFO">Landing page for 'Palvelut' found</msg>
-<arg>Landing page for '${expected_text}' found</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.286605" elapsed="0.000995"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.285604" elapsed="0.001996"/>
-</kw>
-<arg>${Palvelut}</arg>
-<arg>Palvelut</arg>
-<status status="PASS" start="2024-10-12T17:18:57.787428" elapsed="0.500172"/>
-</kw>
-<kw name="Check Landing Page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:58.288936" level="INFO">Clicking element '//html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[11]/a'.</msg>
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.288936" elapsed="0.236808"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.525744" elapsed="0.010747"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.537688" level="INFO">H1 XPath: xpath=//h1</msg>
-<arg>H1 XPath: ${H1}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.537540" elapsed="0.000148"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-12T17:18:58.557485" level="INFO">${h1_text} = Palvelut</msg>
-<var>${h1_text}</var>
-<arg>${H1}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.538691" elapsed="0.018794"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.558487" level="INFO">Retrieved H1 text: Palvelut</msg>
-<arg>Retrieved H1 text: ${h1_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.558487" elapsed="0.000995"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-12T17:18:58.561000" level="INFO">There is no landing page for 'Kampanjat'</msg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.561000" elapsed="0.000000"/>
-</kw>
-<arg>'${expected_text}' in '${h1_text}'</arg>
-<arg>Log</arg>
-<arg>Landing page for '${expected_text}' found</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>There is no landing page for '${expected_text}'</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-12T17:18:58.559987" elapsed="0.002018"/>
-</kw>
-<arg>${Kampanjat}</arg>
-<arg>Kampanjat</arg>
-<status status="PASS" start="2024-10-12T17:18:58.287600" elapsed="0.274405"/>
-</kw>
-<status status="PASS" start="2024-10-12T17:18:44.772313" elapsed="13.789692"/>
+<status status="PASS" start="2024-10-13T12:59:38.111708" elapsed="31.987135"/>
 </test>
-<status status="PASS" start="2024-10-12T17:18:44.481229" elapsed="14.081779"/>
+<status status="PASS" start="2024-10-13T12:59:37.495197" elapsed="32.639124"/>
 </suite>
 <statistics>
 <total>

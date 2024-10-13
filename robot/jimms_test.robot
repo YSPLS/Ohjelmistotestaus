@@ -126,10 +126,54 @@ Test_7
     Sleep    2
 
 
+Test_8
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    #Käyttäjätilin luonti
+    Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a/span
+    Sleep    1
+    #ei asiakastiliä
+    Click Element    xpath:/html/body/main/div/div[1]/div/div/div/div[2]/input
+    Sleep    1
+    #Information
+    Click Element    name:EmailAddress
+    Input Text    name:EmailAddress    IiroPeltonen@gmail.com
+    Sleep    1
+
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input
+    Input Text      xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input    salasana
+    Sleep    1
+    
+    Click Element    name:ConfirmPassword
+    Input Text    name:ConfirmPassword    salasana    
+    Sleep    1
+
+    Click Element    name:FirstName
+    Input Text    name:FirstName    Iiro
+    Sleep    1
+
+    Click Element    name:LastName
+    Input Text    name:LastName    Peltonen
+    Sleep    1
+    
+    Click Element    name:PostalCode
+    Input Text    name:PostalCode    13600
+    Sleep    1
+
+    Click Element    name:City
+    Input Text    name:City    Hämeenlinna
+    Sleep    1
+
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
+    Sleep    1
+
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
+    Sleep    3
 
 *** Keywords ***
 Check Landing Page
-    [Arguments]    ${element}    ${expected_text}
+    [Arguments]    ${element}    ${expected_text}    
     Click Element    ${element}
     Wait Until Element Is Visible    ${H1}    timeout=10
     # Log the current value of H1
@@ -139,3 +183,5 @@ Check Landing Page
     ${h1_text}=    Get Text    ${H1}
     Log    Retrieved H1 text: ${h1_text}
     Run Keyword If    '${expected_text}' in '${h1_text}'    Log    Landing page for '${expected_text}' found    ELSE    Log    There is no landing page for '${expected_text}'
+
+
