@@ -27,7 +27,7 @@ Test_1
     Check Landing Page    ${Komponentit}    Komponentit
     Check Landing Page    ${Oheislaitteet}    Oheislaitteet
     Check Landing Page    ${Pelaaminen}    Pelaaminen
-    Check Landing Page    ${Sim_Racing}    Sim_Racing
+    Check Landing Page    ${Sim_Racing}    Sim Racing
     Check Landing Page    ${Verkkotuotteet}    Verkkotuotteet
     Check Landing Page    ${Tarvikkeet}    Tarvikkeet
     Check Landing Page    ${Erikoistuotteet}    Erikoistuotteet
@@ -51,7 +51,7 @@ Test_3
     #RMA request test
     Open Browser    https://www.jimms.fi/    Firefox
     Maximize Browser Window
-    Sleep    3
+    Sleep    6
     Click Element    xpath://html/body/footer/div[1]/div[2]/div[1]/ul/li[4]/a
     Click Element    xpath://html/body/main/div[2]/div/div[2]/div/div/ol/li[2]/a
 
@@ -61,10 +61,13 @@ Test_3
     Input Text    xpath://*[@id="pf-PostalCode"]    04130
     Input Text    xpath://*[@id="pf-City"]    Sipoo
     Input Text    xpath://*[@id="pf-Email"]    Jokeri95@gmail.com
-    Input Text    xpath://*[@id="pf-Phone"]    +358124412334
+    Sleep    3
+    Input Text    xpath://*[@id="pf-Phone"]    +3584578400950
     Input Text    xpath://*[@id="pf-RmaProductCode"]    42069
     Input Text    xpath://*[@id="pf-RmaProductName"]    Tampuriini
     Input Text    xpath://*[@id="RmaMessage"]    Ei pojat asiat näin huonosti voi olla
+
+    Sleep    6
     Input Text    xpath://*[@id="pf-BankAccount"]    FI39458729347
     Input Text    xpath://*[@id="pf-OSPassword"]    0420
     
@@ -81,7 +84,7 @@ Test_4
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[1]/i[2]
     Sleep    2
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[31]/span[2]
-    Sleep    2
+    Sleep    5
     Click Element    xpath://html/body/main/div[2]/div/div[1]/filtermenu/div/div[2]/div[3]/div[3]/div[2]/div/div[3]/div[1]/span
 
 Test_5
