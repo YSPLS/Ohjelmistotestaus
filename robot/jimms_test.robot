@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Library    String
 Library    XML
 Library    Collections
+Library    Screenshot
 
 *** Variables ***
 ${H1}    xpath=//h1
@@ -173,6 +174,25 @@ Test_8
 
     Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
     Sleep    3
+
+Test_9 Search for a product (ps5)
+
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    Click Element    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input
+    Input Text    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ps5
+    Sleep    1
+    Click Element    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/button/i
+    Sleep    1
+    Press Keys    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ENTER
+    Sleep    1
+    Capture Element Screenshot    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box    ps5_product.png
+    Sleep    1   
+    Click Element    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span
+    Sleep    1
+    Page Should Contain    PS5
+
 
 *** Keywords ***
 Check Landing Page
