@@ -126,14 +126,6 @@ Test_7
     Open Browser    https://www.jimms.fi/    Chrome
     Maximize Browser Window
     Sleep    1
-    Click Element    xpath:
-    Sleep    2
-
-
-Test_8
-    Open Browser    https://www.jimms.fi/    Chrome
-    Maximize Browser Window
-    Sleep    1
     #Käyttäjätilin luonti
     Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a/span
     Sleep    1
@@ -175,11 +167,12 @@ Test_8
     Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
     Sleep    3
 
-Test_9 Search for a product (ps5)
+Test_8 Search for a product (ps5)
 
     Open Browser    https://www.jimms.fi/    Chrome
     Maximize Browser Window
     Sleep    1
+    #Searching for a product
     Click Element    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input
     Input Text    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ps5
     Sleep    1
@@ -187,12 +180,49 @@ Test_9 Search for a product (ps5)
     Sleep    1
     Press Keys    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ENTER
     Sleep    1
+    #Taking a screenshot of the first product from the search results
     Capture Element Screenshot    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box    ps5_product.png
     Sleep    1   
+    #Clicking the first product from the search results
     Click Element    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span
     Sleep    1
     Page Should Contain    PS5
 
+Test_9 Can you find a link to shopping cart from the product page?
+
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    #Searching for a product
+    Click Element    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input
+    Sleep    1
+    Input Text    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ps5
+    Sleep    1
+    Press Keys    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ENTER
+    Sleep    1
+    #Clicking the first product from the search results
+    Click Element    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span
+    Sleep    1
+    #Checking if the shopping cart link is in the product page
+    Element Should Be Visible    xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a
+
+Test_10 Can you find the shopping cart link icon from the product page?
+    
+    Open Browser    https://www.jimms.fi/    Chrome
+    Maximize Browser Window
+    Sleep    1
+    #Searching for a product
+    Click Element    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input
+    Sleep    1
+    Input Text    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ps5
+    Sleep    1
+    Press Keys    xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input    ENTER
+    Sleep    1
+    #Clicking the first product from the search results
+    Click Element    xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span
+    Sleep    1
+    #Finding the shopping cart link icon and taking a screenshot of it
+    Capture Element Screenshot    xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a/span    shopping_cart_icon.png
 
 *** Keywords ***
 Check Landing Page

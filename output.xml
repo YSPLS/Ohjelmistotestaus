@@ -1,104 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-18T16:11:45.672249" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-21T14:28:10.981522" rpa="false" schemaversion="5">
 <suite id="s1" name="Jimms Test" source="c:\Gitit\Ohjelmistotestaus\robot\jimms_test.robot">
-<test id="s1-t1" name="Test_9 Search for a product (ps5)" line="178">
+<test id="s1-t1" name="Test_10 Can you find the shopping cart link icon from the product page?" line="209">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:46.041624" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
+<msg time="2024-10-21T14:28:11.365443" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
 <arg>https://www.jimms.fi/</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-18T16:11:46.041624" elapsed="2.280055"/>
+<status status="PASS" start="2024-10-21T14:28:11.365443" elapsed="2.553777"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-18T16:11:48.321679" elapsed="0.179678"/>
+<status status="PASS" start="2024-10-21T14:28:13.919220" elapsed="0.127804"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:49.502313" level="INFO">Slept 1 second.</msg>
+<msg time="2024-10-21T14:28:15.049567" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:48.501983" elapsed="1.000803"/>
+<status status="PASS" start="2024-10-21T14:28:14.048544" elapsed="1.001023"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:49.503895" level="INFO">Clicking element 'xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input'.</msg>
+<msg time="2024-10-21T14:28:15.049567" level="INFO">Clicking element 'xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input'.</msg>
 <arg>xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-18T16:11:49.503895" elapsed="0.060788"/>
+<status status="PASS" start="2024-10-21T14:28:15.049567" elapsed="0.064929"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-21T14:28:16.114878" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-21T14:28:15.114496" elapsed="1.000382"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:49.565687" level="INFO">Typing text 'ps5' into text field 'xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input'.</msg>
+<msg time="2024-10-21T14:28:16.114878" level="INFO">Typing text 'ps5' into text field 'xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input'.</msg>
 <arg>xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input</arg>
 <arg>ps5</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-18T16:11:49.564683" elapsed="0.059743"/>
+<status status="PASS" start="2024-10-21T14:28:16.114878" elapsed="0.065884"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:50.624614" level="INFO">Slept 1 second.</msg>
+<msg time="2024-10-21T14:28:17.194734" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:49.624426" elapsed="1.000188"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:50.624614" level="INFO">Clicking element 'xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/button/i'.</msg>
-<arg>xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/button/i</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-18T16:11:50.624614" elapsed="0.061751"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:51.686615" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:50.686365" elapsed="1.000250"/>
+<status status="PASS" start="2024-10-21T14:28:16.194286" elapsed="1.000448"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:51.686615" level="INFO">Sending key(s) ('ENTER',) to xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input element.</msg>
-<msg time="2024-10-18T16:11:51.988162" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-10-18T16:11:51.988162" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-10-21T14:28:17.197353" level="INFO">Sending key(s) ('ENTER',) to xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input element.</msg>
+<msg time="2024-10-21T14:28:17.496834" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-10-21T14:28:17.496834" level="INFO">Releasing special key ENTER.</msg>
 <arg>xpath:/html/body/header/div/div[4]/jim-quickproductsearch/div/form/input</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-10-18T16:11:51.686615" elapsed="0.380128"/>
+<status status="PASS" start="2024-10-21T14:28:17.196470" elapsed="2.548704"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:53.068218" level="INFO">Slept 1 second.</msg>
+<msg time="2024-10-21T14:28:20.747560" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:52.068029" elapsed="1.000189"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:53.252053" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ps5_product.png"&gt;&lt;img src="ps5_product.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box</arg>
-<arg>ps5_product.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-10-18T16:11:53.068218" elapsed="0.183835"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:54.253526" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:53.253049" elapsed="1.000477"/>
+<status status="PASS" start="2024-10-21T14:28:19.746314" elapsed="1.001246"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:54.253526" level="INFO">Clicking element 'xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span'.</msg>
+<msg time="2024-10-21T14:28:20.747560" level="INFO">Clicking element 'xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span'.</msg>
 <arg>xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-18T16:11:54.253526" elapsed="0.680020"/>
+<status status="PASS" start="2024-10-21T14:28:20.747560" elapsed="1.340635"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-18T16:11:55.934388" level="INFO">Slept 1 second.</msg>
+<msg time="2024-10-21T14:28:23.088327" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-18T16:11:54.933546" elapsed="1.000842"/>
+<status status="PASS" start="2024-10-21T14:28:22.088195" elapsed="1.000132"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-18T16:11:55.965666" level="INFO">Current page contains text 'PS5'.</msg>
-<arg>PS5</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-18T16:11:55.935405" elapsed="0.030261"/>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-21T14:28:23.192492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="shopping_cart_icon.png"&gt;&lt;img src="shopping_cart_icon.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[3]/div[2]/addto-cart-wrapper/div/a/span</arg>
+<arg>shopping_cart_icon.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-10-21T14:28:23.089332" elapsed="0.103696"/>
 </kw>
-<status status="PASS" start="2024-10-18T16:11:46.041624" elapsed="9.924042"/>
+<status status="PASS" start="2024-10-21T14:28:11.365443" elapsed="11.829118"/>
 </test>
-<status status="PASS" start="2024-10-18T16:11:45.676244" elapsed="10.289422"/>
+<status status="PASS" start="2024-10-21T14:28:10.989525" elapsed="12.208506"/>
 </suite>
 <statistics>
 <total>
